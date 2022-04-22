@@ -1,0 +1,199 @@
+:root{
+    --main-background: hsl(233, 47%, 7%);
+    --card-background: hsl(244, 38%, 16%);
+    --soft-violet-accent: rgb(170, 92, 219);
+
+--white: hsl(0, 0%, 100%);
+
+    --main-paragraph-color: hsla(0, 0%, 100%, 0.75);
+    --stat-headings: hsla(0, 0%, 100%, 0.6);
+    --font-size : 0.9rem
+    --font-family-1 : 'Inter', sans-serif;
+    --font-family-2: 'Lexend Deca', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    
+}
+
+
+body{
+background: var(--main-background);
+display: flex;
+width: 100vw;
+height: 100%;
+
+justify-content: center;
+align-items: center;
+
+}
+
+main{
+    width: 20.5rem;
+    background: var(--card-background);
+    border-radius: 12px;
+    height: fit-content;
+    margin: 4rem auto;
+   
+    
+}
+
+.image{
+   position: relative;
+   border-radius: 12px 12px 0 0;
+   width: 100%;
+   height: 15rem;
+   overflow: hidden;
+ 
+}
+
+
+.overlay{
+position: absolute;
+width: 100%;
+height: 100%;
+top: 0;
+right: 0;
+background: rgba(170, 92, 219, 0.6);
+border-radius: 12px 12px 0 0;
+overflow: hidden;
+}
+
+.visible{
+    display: block ;
+    overflow: hidden;
+}
+
+.info{
+    margin: 2.5rem;
+text-align: center;
+color: var(--white);
+
+}
+
+
+.info h1 span{
+    color: var(--soft-violet-accent);
+    
+}
+.info p{
+font-size: 15px;
+margin-top: 1.5rem;
+line-height: 1.2rem;
+color: var(--main-paragraph-color);
+}
+
+.all-stats{
+text-align: center;
+margin-bottom:2rem;
+}
+.stat{
+   margin-bottom: 2rem; 
+    
+}
+.stat h2{
+
+margin-bottom: 4px;
+color: var(--white);
+}
+
+.stat figcaption{
+    text-transform: uppercase;
+    font-family:'Lexend Deca', sans-serif; 
+    font-size: 0.8rem;
+    color: var(--stat-headings);
+}
+
+
+
+/* Desktop Version
+
+ width: 70rem;
+*/
+
+@media screen and (min-width:1200px) {
+
+    body{
+        height: 100vh;
+    }
+    main{
+        width: 80%;
+        height: 28rem;
+      display: flex;
+      flex-direction: row-reverse;
+      margin: auto;
+    }
+    .image{
+        height: 100%;
+        width: auto;
+     border-radius: 0 12px 12px 0 ;
+    }
+    .overlay{
+        border-radius: 0 12px 12px 0 ;
+    }
+    .visible{
+        display: none;
+    }
+   
+  
+.group{
+    width: 50%;
+
+}
+
+.info{
+    text-align: left;
+    margin-top: 4rem;
+   
+
+}
+.info h1{
+    font-size: 2rem;
+    line-height: 2.8rem;
+}
+    
+.info p{
+font-size: 1rem;
+line-height: 1.5rem;
+padding: 1rem;
+padding-left: 0;
+padding-top: 0 ;
+}
+
+.all-stats{
+    display: flex;
+   margin-left: 2.5rem;
+   margin-right: 5rem;
+   justify-content: space-between;
+
+   padding-right: 1.4rem;
+   align-items: center;
+}
+
+
+
+
+}
+
+
+
+
+
+/* 
+solution to two images 
+
+have two image tag in html.
+for mobile, set the display of desktop image to none.
+
+in the media query, set the display of the mobile image to none.
+THey should have the same class. e.g img
+
+They should also have another class called mobile and desktop respectively. 
+
+I should be able to manipulate the image to change dynamically using this method.
+
+*/
